@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html_homework05</title>
+    <style>
+      table {
+        background-color: yellow;
+        width: 500px;
+      }
+      table,
+      th,
+      td {
+        border-width: 1px;
+        border-style: solid;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        서적 구입 비용
+      </caption>
+      <thead>
+        <tr>
+          <th>서적명</th>
+          <th>출판사</th>
+          <th>가격</th>
+          <th>기타</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="2">합계</td>
+          <td>80,000원</td>
+          <td></td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>제우스</td>
+          <td>30,000원</td>
+          <td rowspan="2"></td>
+        </tr>
+        <tr>
+          <td>JSP</td>
+          <td>가메</td>
+          <td>50,000원</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">교실</th>
+          <th colspan="2" id="s">수강생</th>
+        </tr>
+        <tr>
+          <th id="m">남</th>
+          <th id="w">여</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>합계</th>
+          <td>32</td>
+          <td>25</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th id="L1">L1반</th>
+          <td headers="L1 s m">19</td>
+          <td headers="L1 s w">11</td>
+        </tr>
+        <tr>
+          <th id="L2">L2반</th>
+          <td headers="L2 s m">13</td>
+          <td headers="L2 s w">14</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <h1>가지고 있는 물건</h1>
+    <ul>
+      <li>시계</li>
+      <li>가방</li>
+      <li>수첩</li>
+    </ul>
+    <h1>교육순서</h1>
+    <ol>
+      <li>JAVA</li>
+      <li>ORACLE</li>
+      <li>JSP</li>
+    </ol>
+  </body>
+</html>
