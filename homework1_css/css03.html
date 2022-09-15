@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03</title>
+    <style>
+      body h1 {
+        color: red;
+      }
+
+      h1 {
+        color: blue;
+      }
+
+      h1,
+      h2 {
+        color: yellow;
+      }
+
+      h1.wrap {
+        color: orange;
+      }
+
+      #data {
+        color: yellow !important;
+      }
+
+      #data.cnt {
+        color: aqua;
+      }
+
+      p .unit {
+        background-color: blue;
+      }
+
+      p.unit {
+        background-color: red;
+      }
+
+      .unit {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="wrap">title1</h1>
+    <div>
+      <div>
+        <h1>test2</h1>
+      </div>
+    </div>
+    <p id="data" class="cnt">
+      우선순위는 요소들에 적용할 스타일이 중복될 때 적용되는 스타일을 계산하는
+      방법이다.
+    </p>
+
+    <p>
+      <span class="unit"
+        >스타일을 적용하기 위해서는 선택자를 지정하여 설명할 수 있다.</span
+      >
+    </p>
+    <p class="unit">
+      요소들에 스타일을 적용하기 위해서는 선택자를 지정하여 설명할 수 있다.
+    </p>
+  </body>
+</html>
