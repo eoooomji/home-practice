@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css16.html</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: beige;
+        /* display: none; */
+        visibility: visible;
+        width: 50px;
+        height: 50px;
+      }
+
+      div.over {
+        width: 200px;
+        height: 100px;
+        border: 1px solid;
+        overflow: visible;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <p>before</p>
+    <div></div>
+    <p>after</p>
+
+    <div class="over">
+      HTML요소들의 위치 변경 W3Schools is optimized for learning, testing, and
+      training. Examples might be simplified to improve reading and basic
+      understanding. Tutorials, references, and ...
+    </div>
+  </body>
 </html>
