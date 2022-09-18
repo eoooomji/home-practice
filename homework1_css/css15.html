@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css15.html</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      #aa {
+        background-color: red;
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+      }
+
+      #bb {
+        background-color: green;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+      }
+
+      #cc {
+        background-color: blue;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="aa">aa</div>
+    <div id="bb">bb</div>
+    <div id="cc">cc</div>
+  </body>
+</html>

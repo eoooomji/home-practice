@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css12.html</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+      /* body {
+        margin-left: 10px;
+      } */
+
+      body div.wrap {
+        width: 1208px;
+        margin: 10px auto;
+      }
+
+      h1 {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        text-indent: -2000px;
+      }
+
+      ul.mainmenu {
+        width: 1208px;
+        height: 104px;
+        background-color: yellow;
+        border-left: 2px solid;
+        list-style-type: none;
+      }
+
+      ul.mainmenu li {
+        border: 2px solid;
+        float: left;
+        border-left-width: 0px;
+      }
+
+      ul.mainmenu li a {
+        display: block;
+        font-size: 0px;
+        text-indent: -2000px;
+        width: 300px;
+        height: 100px;
+      }
+
+      ul.mainmenu li.mail a {
+        background-image: url(images/mail.gif);
+      }
+      ul.mainmenu li.cafe a {
+        background-image: url(images/cafe.gif);
+      }
+      ul.mainmenu li.blog a {
+        background-image: url(images/blog.gif);
+      }
+      ul.mainmenu li.kin a {
+        background-image: url(images/kin.gif);
+      }
+
+      ul.mainmenu li.mail a:hover {
+        background-position: -300px 0px;
+        background-repeat: no-repeat;
+      }
+
+      ul.mainmenu li.blog a:hover {
+        background-position: -300px 0px;
+        background-repeat: no-repeat;
+      }
+
+      ul.mainmenu li.cafe a:hover {
+        background-position: -300px 0px;
+        background-repeat: no-repeat;
+      }
+
+      ul.mainmenu li.kin a:hover {
+        background-position: -300px 0px;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>메뉴</h1>
+        <nav>
+          <ul class="mainmenu">
+            <li class="mail"><a href="#">메일</a></li>
+            <li class="cafe"><a href="#">카페</a></li>
+            <li class="blog"><a href="#">블로그</a></li>
+            <li class="kin"><a href="#">지식인</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
