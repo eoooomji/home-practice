@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css04.html</title>
     <style>
+      a {
+        text-decoration: none;
+      }
+
       a:link {
         background-color: red;
       }
@@ -22,10 +26,73 @@
       a:active {
         background-color: blue;
         color: yellow;
+        text-decoration: underline;
+      }
+
+      div.first :first-child {
+        background-color: blue;
+      }
+
+      div.first :last-child {
+        background-color: aqua;
+      }
+
+      /* 모든 자식요소에서 p요소가 2번째일 때 적용. 2번째가 p요소가 아니면 적용x */
+      /* .nth p:nth-child(2) {
+        background-color: red;
+      } */
+
+      /* .nth p:nth-of-type(2) {
+        background-color: yellow;
+      } */
+
+      /* .nth :nth-child(even) {
+        background-color: green;
+      } */
+
+      /*.nth p:nth-child(even) {
+        background-color: gray;
+      }*/
+
+      .nth p:nth-of-type(odd) {
+        background-color: blueviolet;
+      }
+
+      .nth p::first-letter {
+        color: white;
+        font-weight: bolder;
+      }
+
+      p::before {
+        content: "what";
+      }
+
+      p::after {
+        content: url(images/sky.jpg);
       }
     </style>
   </head>
   <body>
     <a href="http://www.w3schools.com">W3Schools</a>
+
+    <div class="first">
+      <span>첫번째 div의 span요소</span>
+      <p>첫번째 div의 두번째 자식요소</p>
+      <p>첫번째 div의 세번째 자식요소</p>
+    </div>
+
+    <div class="first">
+      <p>두번째 div의 첫번째 자식요소</p>
+      <p>두번째 div의 두번째 자식요소</p>
+    </div>
+
+    <div class="nth">
+      <p>computer</p>
+      <span>test</span>
+      <p>monitor</p>
+      <p>televsion</p>
+      <p>dsek</p>
+      <p>top</p>
+    </div>
   </body>
 </html>

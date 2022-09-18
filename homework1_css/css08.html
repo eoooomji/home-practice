@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css08.html</title>
+    <style>
+      div.text {
+        width: 800px;
+        height: 300px;
+        background-color: aqua;
+        /* line-height: 50px; */
+        /* text-indent: 50px; */
+        /* text-align: justify; */
+        /* text-decoration: line-through; */
+        /* text-transform: capitalize; */
+        /* letter-spacing: 20px; */
+        /* word-spacing: 50px; */
+      }
+
+      div.font p {
+        font-family: serif, "굴림", "Times New Roman";
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 20px;
+        font-variant: small-caps;
+      }
+
+      div.font span {
+        font: 10px "굴림체";
+      }
+      .wrap .dv1 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-color: black;
+        border-width: 10px;
+        border-style: solid;
+      }
+
+      .wrap .dv2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-bottom-width: 10px;
+        border-bottom-style: dotted;
+        border-bottom-color: aqua;
+      }
+
+      .wrap .dv3 {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border-width: 5px 10px 15px 20px;
+        border-style: solid dotted dashed;
+      }
+
+      .wrap .dv4 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        border: 3px dotted white;
+      }
+
+      .list ul {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+
+      .list ul,
+      li {
+        border: 1px solid;
+      }
+
+      li {
+        /* list-style-image: url(images/icon.png); */
+        /* list-style-position: inside; */
+        list-style: inside url(images/icon.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <p>
+        If one of the properties in the shorthand declaration is the bg-size
+        property, you must use a / (slash) to separate it from the bg-position
+        property, e.g. background:url(smiley.gif) 10px 20px/50px 50px; will
+        result in a background image, positioned 10 pixels from the left, 20
+        pixels from the top, and the size of the image will be 50 pixels wide
+        and 50 pixels high.
+      </p>
+    </div>
+    <div>sample</div>
+    <div class="font">
+      <p>웹 문서의 폰트를 지정할 때 사용한다. web document</p>
+      <span>폰트에 스타일 지정</span>
+    </div>
+    <br />
+    <div class="wrap">
+      <div class="dv1"></div>
+      <br />
+      <div class="dv2"></div>
+      <br />
+      <div class="dv3"></div>
+      <br />
+      <div class="dv4"></div>
+    </div>
+    <br />
+    <div class="list">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </div>
+  </body>
+</html>

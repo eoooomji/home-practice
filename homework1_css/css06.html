@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css06.html</title>
+    <style>
+      * {
+        border-width: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        width: 160px;
+        height: 260px;
+        background-color: yellow;
+      }
+
+      .aa {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        margin-bottom: 10px;
+      }
+
+      .bb {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        margin-top: 10px;
+      }
+
+      .sp1 {
+        background-color: aqua;
+      }
+      .sp2 {
+        background-color: lime;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      div.line {
+        border: 1px solid black;
+      }
+
+      div#m1 {
+        width: 100px;
+        height: 99px;
+        background-color: blue;
+        padding-top: 1px;
+      }
+
+      div#m2 {
+        width: 80px;
+        height: 80px;
+        background-color: yellow;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="aa">one</div>
+      <div class="bb">two</div>
+    </div>
+
+    <div class="inline">
+      <span class="sp1">span1</span><span class="sp2">span2</span>
+    </div>
+
+    <!-- <p>&nbsp;</p> -->
+
+    <div class="line">line</div>
+
+    <div id="m1">
+      <div id="m2">box</div>
+    </div>
+  </body>
+</html>
