@@ -87,7 +87,7 @@
    - letter-spacing : 글자 간격을 지정하는 속성
    - word-spacing : 단어 간격을 지정하는 속성
 
-   > text
+   > text 속성
 
    - indent : '+'값을 주면 들여쓰기, '-'값을 주면 내여쓰기로 지정
    - align : 텍스트 정렬을 지정 (left, right, center, justify)
@@ -102,6 +102,8 @@
      lowercas : 모든 글자를 소문자로 변환  
      none : 변환하지 않음)
    - vertical : 텍스트의 수직정렬 (top, middle, bottom)
+     - vertical속성 : align(정렬값): top, middle, bottom  
+       (테이블 요소에서는 center가 디폴트 값이다.)
 
    > border 속성
 
@@ -110,8 +112,23 @@
      : 시계 방향으로 값을 지정한다.  
      : 값을 만약 두개만 지정했다면 (top,bottom right,left)식으로 지정한다.
 
-   > list-style
+   > list-style 속성
 
    - type : 리스트 스타일의 기호 지정
    - image:url() : 리스트 스타일의 기호에 이미지 삽입
    - position : 들여쓰는 효과내기 (inside, outside)
+
+   > display 속성
+
+   - 요소의 레벨을 변경해주는 속성
+   - none : 화면에서 보이지 않게 만든다.(공간을 차지하지 않는다.)
+   - block : 인라인 요소를 블럭 요소로 바꿔준다.
+   - inline : 블록 요소를 인라인 요소로 바꿔준다.
+   - inline-block : 인라인 요소에 블록 요소를 합쳐 크기와 높이 값을 줄 수 있다.
+   - table-cell : 테이블 요소로 바꿔준다.(기본적으로 가운데 정렬)
+
+   > float 속성
+
+   - 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽으로 이동시키는 기능이다.
+   - 지정된 박스는 문서의 일반적인 흐름에 영향을 받지 않으면서 이동된 위치에 떠 있다.
+   - clear:both; : 왼쪽 오른쪽 상관없이 둘 다 영향을 안받는다.(float 해제)
