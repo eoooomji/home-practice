@@ -35,4 +35,4 @@
 ---
 
 1. 자바스크립트 선언문
-   - <script type="text/javascript"></script>
+   - script type="text/javascript"
