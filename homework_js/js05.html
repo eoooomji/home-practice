@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js05.html</title>
+  </head>
+  <body>
+    <script>
+      let num = 3;
+      console.log(typeof num); // number
+
+      num = '3';
+      console.log(typeof num); // string (문자)
+
+      let avg = 4.5;
+      console.log(typeof avg); // number
+
+      let check = true;
+      console.log(typeof check); // boolean
+
+      let data = undefined;
+      console.log(typeof data); // undefined
+
+      let name = null;
+      console.log(typeof name); // object
+
+      let loc = new String('node');
+      console.log(typeof loc); // object
+      console.log(loc instanceof String); // true
+      console.log(loc instanceof Number); // false
+
+      let jumsu = new Number(10);
+      console.log(typeof jumsu); // object
+      console.log(jumsu instanceof String); // false
+      console.log(jumsu instanceof Number); // true
+
+      let arr = [1, 2, 3];
+      console.log(typeof arr); // objedt
+      console.log(arr instanceof Array); // true
+
+      let customer = { name: '홍길동', age: 30 };
+      console.log(typeof customer); // object
+      console.log(customer instanceof Object); // true
+      console.log(`${customer.name}, ${customer.age}`); // 홍길동, 30
+
+      let div = 30;
+      div = 'javascript';
+      let wrap = div;
+
+      console.log(wrap == div); // true
+      console.log(wrap);
+
+      let guest = { name: '엄지찬', age: 27 };
+      let pcopy = guest;
+      guest.name = '박보검';
+      console.log(guest == pcopy); // true
+      console.log(`${guest.name}`); // 박보검
+      console.log(`${pcopy.name}`); // 박보검
+    </script>
+  </body>
+</html>

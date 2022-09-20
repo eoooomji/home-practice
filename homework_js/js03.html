@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js03.html</title>
+  </head>
+  <body>
+    <script>
+      var foo = 10;
+      let bar = 20;
+      const tap = 50;
+
+      foo = 30;
+      bar = 40;
+      //   tap = 60;
+
+      console.log(`${foo}`);
+      console.log(`${bar}`);
+      console.log(`${tap}`);
+      // > Uncaught TypeError: Assignment to constant variable.
+      // 이유 : 위의 tap 식별자가 const(상수)로 값을 주어 고정되었기 때문
+
+      let subject;
+      console.log(subject);
+      // > undefined
+      // 이유 : subject에 값을 주지 않아 값이 없는 채로 출력이 되었기 때문
+
+      let run = null;
+      console.log(run);
+      // > null
+      // 이유 : null과 undefined와 비슷한 개념이긴 하나 null이라는 값을 직접 주었기 때문에 조금의 차이는 발생함. null자체가 데이터 개념
+
+      console.log(`num=%d`, num);
+      //   let num = 3;
+      // > Uncaught ReferenceError: Cannot access 'num' before initialization
+
+      num = NaN;
+      var num = 3;
+      // > num=NaN
+      // 이유 : 호이스팅 발생으로 인해 var를 코드 위로 끌어올림. var 변수는 이동이 가능하지만 값은 고정되어 있으므로 데이터 값을 상실. %d는 숫자만 출력.
+    </script>
+  </body>
+</html>
