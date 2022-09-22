@@ -120,12 +120,12 @@
       : 배열로 값을 주면 값에 index가 주어진다.  
       : 배열에 있는 각각의 값을 element라 부른다.
     - 객체 (Object)
-      : {x:n, y:n-1} - 직관적으로 구분이 가능하다.
-      : 리터럴(property) {property:value, property:value}
-      : java에서는 element(요소)를 가져옴 for(String element : city)
+      : {x:n, y:n-1} - 직관적으로 구분이 가능하다.  
+      : 리터럴(property) {property:value, property:value}  
+      : java에서는 element(요소)를 가져옴 for(String element : city)  
       : javascript에서는 index를 가져옴 for(let idx in city){}
     - 함수 : function
-    - new String, new Number .... : 일반적인 string의 주소가 아닌 new로 새로운 주소를 만들어 그곳에 데이터를 저장한다.
+    - new String, new Number .... : 일반적인 string(원시데이터)의 주소가 아닌 new로 새로운 주소를 만들어 그곳에 데이터(객체)를 저장한다.
 
     > typeof : 어떠한 데이터 타입인지 알아보기 위해 사용한다.  
     > instanceof : 객체가 정확히 어떠한 타입인지 알아보기 위해 사용한다.
@@ -137,9 +137,11 @@
     - 반복문 : for, whil, do~while, for~in, for~of
     - label(임의의 이름을 정의), continue(for), break(switch)
 
-    > ## 조건문
-    >
-    > : 조건식의 값이 참인지 거짓인지에 따라 실행문의 제어가 결정된다.
+    ## (1) 조건문
+
+    : 조건식의 값이 참인지 거짓인지에 따라 실행문의 제어가 결정된다.
+
+    ***
 
     ## 1. if 문
 
@@ -147,65 +149,71 @@
 
     > 조건문(if)식 예시
 
-    - if 기본 조건식  
-       if(조건식){  
-       실행문;  
-       }
+         - if 기본 조건식
+           if(조건식){
+           실행문;
+            }
 
-    - if~else 조건식  
-       if(조건식){  
-       실행문;  
-       }else{  
-       실행문;  
-       };
+        - if~else 조건식
+            if(조건식){
+            실행문;
+            }else{
+            실행문;
+            };
 
-    - 여러 조건식이 필요할 때의 조건식  
-       if(조건식1){  
-       실행문1;  
-       }else if(조건식2){  
-       실행문2;  
-       }else if(조건식3){  
-       실행문3;  
-       }else{  
-       실행문4;  
-       }
+        - 여러 조건식이 필요할 때의 조건식
+            if(조건식1){
+            실행문1;
+            }else if(조건식2){
+            실행문2;
+            }else if(조건식3){
+            실행문3;
+            }else{
+            실행문4;
+            }
+
+    ***
 
     > 선택문 : 변수에 저장된 값과 switch문에 있는 case(경우)의 값을 검사하여,  
     >  변수와 경우의 값에서 일치하는 값이 있을 떄 그에 해당하는 실행문을 실행한다.
 
     ## 2. switch 문
 
-    > 선택문(switch)식 예시
+    ### [선택문(switch)식 예시]
 
-    - switch(식){  
-       case 값1 : 실행문1; break;  
-       case 값2 : 실행문2; break;  
-       case 값3 : 실행문3; break;  
-       default : 실행문;  
-       }
+        - switch(식){
+            case 값1 : 실행문1; break;
+            case 값2 : 실행문2; break;
+            case 값3 : 실행문3; break;
+            default : 실행문;
+            }
 
-    > ## 반복문
+    ## (2) 반복문
+
+    ***
 
     ## 1. for 문
 
-    : 조건식을 만족할 때까지 특정 실행문을 반복해서 실행한다.  
+    : 조건식을 만족할 때까지 특정 실행문을 반복해서 실행한다.
     : 초기식과 조건식은 생략이 가능하다.(조건식을 생략하게 되면 무한으로 돌아간다.)
 
-    > 반복문(for)식 예시
+    ***
 
-    - for(초기값; 조건식; 증감식){  
-      실행문;  
-      }
+    ### [반복문(for)식 예시]
 
-    - 중첩반복문  
-      for(초기값; 조건식; 증감식){  
-      for(초기값; 조건식; 증감식){  
-      실행문;  
-      }  
-      }
+        - for(초기값; 조건식; 증감식){
+            실행문;
+            }
 
-    > 초기식 -> 조건식(true) -> 실행문 -> 증감식  
-    > -> 조건식(true) ->실행문 -> 증감식  
+        - 중첩반복문
+            for(초기값; 조건식; 증감식){
+            for(초기값; 조건식; 증감식){
+            실행문;
+            }
+            }
+
+    > 초기식 -> 조건식(true) -> 실행문 -> 증감식
+    > -> 조건식(true) ->실행문 -> 증감식
     > -> 조건식(false) or break; -> 반복문 빠져나감
 
            - continue
@@ -223,19 +231,21 @@
 
     ## 2. while문
 
-    : 무한으로 값(파일 등)을 가져올 때 사용한다.  
-     : 조건식 생략이 안된다.  
-     : do~while 문은 조건문의 결과와 상관 없이 무조건 1번은 실행된다.
+    : 무한으로 값(파일 등)을 가져올 때 사용한다.
+    : 조건식 생략이 안된다.
+    : do~while 문은 조건문의 결과와 상관 없이 무조건 1번은 실행된다.
 
-    > 반복문(while)식 예시
+    ***
 
-    - while(조건식){  
-       실행문;  
-       }
+    ### [반복문(while)식 예시]
 
-    - do(  
-       실행문;  
-       )while(조건식);
+        - while(조건식){
+          실행문;
+          }
+
+        - do(
+          실행문;
+          )while(조건식);
 
     ## 3. for~in 문
 
@@ -243,24 +253,57 @@
     : 배열에 있는 각각의 값을 element라 부른다.
     : index를 가져온다.(index에 주어진 데이터를 불러올 수 있다.)
 
-    > for~in 식 예시
+    ***
 
-    - let x = { a: 1, b: 2, c: 3};  
-      for (let y in x) {  
-      console.log(y y[x]);  
-      }  
-      결과 값 : a 1, b 2, c 3
+    ### [for~in 식 예시]
+
+        - let x = { a: 1, b: 2, c: 3};
+            for (let y in x) {
+            console.log(y y[x]);
+            }
+
+    결과 값 : a 1, b 2, c 3
 
     ## 4. for~of 문
 
-    : 반복 가능한 객체(Array, String, Map, Set, arguments)를 반복하는 객체.  
-     : 즉, iterable 속성을 가진 객체만 가능
+    : 반복 가능한 객체(Array, String, Map, Set, arguments)를 반복하는 객체.
+    : 즉, iterable 속성을 가진 객체만 가능
     : element를 가져온다.
 
-    > for~of 식 예시
+    ***
 
-    - let s = ['red', 'green', 'blue'];  
-      for (let k of s) {  
-      console.log(k);  
-      }  
-      결과 값 : red, green, blue
+    ### [for~of 식 예시]
+
+        - let s = ['red', 'green', 'blue'];
+            for (let k of s) {
+            console.log(k);
+            }
+            결과 값 : red, green, blue
+
+---
+
+## 10. 함수(function)
+
+: 특정기능을 하는 구문을 독립된 부품으로 만들어 재사용하고자 할 때 사용하는 문법.  
+ (전역 변수 : 함수의 외부에서 선언된 변수)
+
+    ***
+
+    ### [함수 정의]
+
+         - 함수 선언문
+            function 함수명(매개변수=parameter) {
+            실행문;
+            return 값;
+            }
+
+        - 함수 표현식
+            let 변수 = 함수명(인수= arguement){
+            실행문;
+            return 값;
+            }
+
+        - 즉시 실행(익명 함수)
+            (function(param){
+            console.log(`${param} run~~~`);
+            })('test');
