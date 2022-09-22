@@ -83,3 +83,98 @@ console.log(call2(3)); // 3
 let call3 = (a) => console.log(a);
 console.log(call3(56)); // undefined
 call3(56); // 56
+
+console.log(`====================================================`);
+
+function outer(a, b) {
+  let result = inner(a, b);
+  function inner(a, b) {
+    return a + b;
+  }
+
+  return result;
+}
+console.log(outer(10, 3));
+
+console.log(`====================================================`);
+
+function callback(a, b) {
+  return a + b;
+}
+
+function getNumber(callFunc) {
+  console.log(`== : ${callFunc}`);
+  let result = callFunc(1, 6);
+  return result;
+}
+
+console.log(getNumber(callback));
+
+console.log(`====================================================`);
+
+function outerFun() {
+  let sum = 50;
+  function innerFun(a) {
+    return sum + a;
+  }
+  return innerFun;
+}
+console.log(outerFun());
+
+let outerCall = outerFun();
+console.log(outerCall);
+console.log(outerCall()); //NaN
+console.log(outerCall(4)); //54
+
+console.log(`====================================================`);
+
+function testA() {
+  console.log(`testA before`);
+  testB();
+  console.log(`testA after`);
+}
+function testB() {
+  console.log(`testB before`);
+  testC();
+  console.log(`testB after`);
+}
+function testC() {
+  console.log(`testC`);
+}
+testA();
+
+console.log(`====================================================`);
+
+function display(a = 0, b = 0) {
+  console.log(`a=${a}, b=${b}`);
+}
+display(1);
+
+function dp(...args) {
+  console.log(args);
+  console.log(typeof args, args instanceof Array);
+}
+dp(1, 2);
+dp(1, 2, 3, 4, 5);
+dp();
+
+function dpy(num, ...args) {
+  console.log(num);
+  console.log(args);
+}
+dpy(1, 2);
+dpy('asd', 3);
+dpy();
+
+console.log(`====================================================`);
+
+function dip() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(typeof arguments, arguments instanceof Array, arguments.callee);
+    console.log(arguments[i]);
+  }
+}
+dip(1);
+dip('1');
+dip();
+// dip(1, 2, 3, 4, 5);
