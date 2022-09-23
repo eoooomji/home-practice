@@ -13,3 +13,15 @@ for (let idx in person) {
 }
 
 let student = ['홍길동', [100, 90, 20]];
+for (let idx in student) {
+  console.log(student[idx], typeof student[idx]);
+  console.log(idx);
+}
+for(let element of student){
+    console.log(element);
+}
+console.log(student);
+
+let cars = new Array();
+let Cars = new Array('Sasb', 'Volvo', 'Bmw');
+for(let idx in )
