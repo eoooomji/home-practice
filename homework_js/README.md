@@ -279,6 +279,7 @@
 : 배열로 값을 주면 index가 주어진다.
 : 배열에 있는 각각의 값을 element라 부른다.
 : index를 가져온다.(index에 주어진 데이터를 불러올 수 있다.)
+: for() => for ~ in : index
 
 ---
 
@@ -296,6 +297,7 @@
 : 반복 가능한 객체(Array, String, Map, Set, arguments)를 반복하는 객체.
 : 즉, iterable 속성을 가진 객체만 가능
 : element를 가져온다.
+: for() = > for ~ of : element
 
 ---
 
@@ -384,7 +386,7 @@
 : 원시데이터타입(primitive type)에 '.' 을 붙이면 객체(object)로 변한다.
 
     - toString()
-      : Number를 string으로 바꿔준다.
+      : object나 배열 등 값을 string으로 바꿔준다.
     - valueof()
       : object를 primitive로 바꿔준다.
     - parseInt()
@@ -430,10 +432,89 @@
         : 검색 데이터와 일치하는 문자열이 있으면 문자열 모두를 찾아서 배열로 리턴하고 일치하는 문자열이 없으면 null로 리턴한다.
     - search()
         : 검색데이터와 일치하는 문자열이 있으면 처음의 index를 리턴하고 일치하는 문자열이 없으면 -1을 리턴한다.
-    - indexOf()
-        : 문자열의 인덱스를 리턴한다.
+    - indexOf() / lastIndexOf()
+        : 문자열의 인덱스를 리턴한다. / 역순으로 문자열의 인덱스를 리턴한다.
     - repeat()
         : 문자를 반복해서 사용한다.
     - trim()
         : 문자열의 양쪽에 위치한 공백을 지워준다.
         : 문자열 사이의 공백은 지우지 않는다.
+
+---
+
+### 3. Array
+
+: 리스트 형태의 객체인 배열을 나타내는 객체이다.
+
+    [] : 생략이 가능하다는 뜻
+    Math.sqrt : 숫자의 제곱근 출력(리턴,반환)
+    - forEach()
+        : 배열 전용 메소드
+        : 배열.forEach(function(element[, index]){수행할 문장})
+        : 문자열은 forEach()를 제공하지 않으므로 사용할 수 없다.
+        : 주어진 함수를 배열 요소 각각에 대해 실행한다.
+    - map()
+        : 배열.map(callback(함수))
+        : 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환하는 메서드
+    - reduce()
+        : 이전요소와 현재요소와의 관계를 어떻게 만들지 결정하는 메서드
+    - filter()
+        : 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환하는 메서드
+    - push()
+        : 배열의 끝에 요소를 추가하는 메서드
+    - pop()
+        : 배열의 끝에 요소를 제거하는 메서드
+    - unshift()
+        : 배열의 앞에 요소를 추가하는 메서드
+    - shift()
+        : 배열의 앞에 요소를 제거하는 메서드
+    - slice(a,b)
+        : 특정 범위의 요소를 가져오는 메서드
+    - 정렬 메서드
+        : javascript에서 sort()는 Tim Sort 알고리즘을 사용한다.
+        : Tim Sort는 Insertion sort와 Merge Sort를 결합하여 만든 정렬이다.
+        : Tim Sort 알고리즘 : https://d2.naver.com/helloworld/0315536
+        - sort()
+            : 오름차순 정렬
+            : 숫자와 문자는 각각 정렬하였을 때 출력 값이 다르다.
+            : 예시)
+                let point = [40, 100, 1, 5, 10];
+                console.log(point.sort());
+                값 : [ 1, 10, 100, 40, 5 ]
+        - sort().reverse()
+            : 내림차순 정렬
+            : 예시)
+                let point = [40, 100, 1, 5, 10];
+                console.log(point.sort().reverse());
+                값 : [ 5, 40, 100, 10, 1 ]
+        - 숫자의 크기에 따라서 정렬하는 방법
+            : 오름차순
+                let p = [40, 100, 1, 5, 10];
+                console.log(p.sort(function (a,b){
+                    return a-b;
+                })
+                );
+                값 : [ 1, 5, 10, 40, 100 ]
+            : 내림차순
+                let p = [];
+                console.log(p.sort(function (a,b){
+                    return b-a;
+                })
+                );
+                값 : [ 100, 40, 10, 5, 1 ]
+        - concat()
+            : 다른 두 배열을 합칠 때 사용
+
+---
+
+### 4. Spread Operator
+
+    [1] 배열에서의 Spread Operator
+      1. 배열 복사(Array copy)
+
+      - 얇은 복사(shallow copy)
+          : 데이터 값이 저장된 주소를 복사본이 같이 사용한다.
+      - 깊은 복사(deep copy)
+          : 복사본을 같이 사용하는게 아닌 새로운 주소에 복사하여 사용한다.
+
+      2. 배열 병합(Array Concatenation)
