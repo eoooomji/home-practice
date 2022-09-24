@@ -17,11 +17,44 @@ for (let idx in student) {
   console.log(student[idx], typeof student[idx]);
   console.log(idx);
 }
-for(let element of student){
-    console.log(element);
+for (let element of student) {
+  console.log(element);
 }
 console.log(student);
 
 let cars = new Array();
 let Cars = new Array('Sasb', 'Volvo', 'Bmw');
-for(let idx in )
+for (let idx in Cars) {
+  console.log(idx, typeof idx, Cars[idx], typeof Cars[idx]);
+}
+
+let color = [];
+console.log(color.length);
+color[0] = 'red';
+console.log(color.length);
+color.push('green');
+console.log(color.length);
+color.push(233);
+console.log(color.length);
+color[8] = 'blue';
+console.log(color.length);
+console.log(color);
+for (let idx in color) {
+  console.log(idx, typeof idx, color[idx], typeof color[idx]);
+}
+
+let point = new Array(3);
+console.log(point.length);
+let shape = new Array(10, 20);
+console.log(shape.length);
+for (let idx in shape) {
+  console.log(idx, typeof idx, shape[idx], typeof shape[idx]);
+}
+shape[2] = 50;
+console.log(shape[1]);
+console.log(shape.length);
+console.log(shape);
+
+shape.forEach(function (element, index) {
+  console.log(index, element);
+});
