@@ -476,6 +476,8 @@
         : 이전요소와 현재요소와의 관계를 어떻게 만들지 결정하는 메서드
     - filter()
         : 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환하는 메서드
+    - join()
+        : 문자열 사이에 값을 추가하는 메서드
     - push()
         : 배열의 끝에 요소를 추가하는 메서드
     - pop()
@@ -484,8 +486,12 @@
         : 배열의 앞에 요소를 추가하는 메서드
     - shift()
         : 배열의 앞에 요소를 제거하는 메서드
+    - delete 변수[index]
+        : index에 위치한 요소를 제거하는 메서드
     - slice(a,b)
         : 특정 범위의 요소를 가져오는 메서드
+    - flat()
+        : 모든 하위 배열 요소를 지정한 깊이까지 재귀적으로 이어붙인 새로운 배열을 생성하는 메서드
     - 정렬 메서드
         : javascript에서 sort()는 Tim Sort 알고리즘을 사용한다.
         : Tim Sort는 Insertion sort와 Merge Sort를 결합하여 만든 정렬이다.
@@ -523,7 +529,7 @@
 
 ---
 
-### 4. Spread Operator
+### 4. Spread Operator(js15참조)
 
     [1] 배열에서의 Spread Operator
       1. 배열 복사(Array copy)
@@ -534,3 +540,33 @@
           : 복사본을 같이 사용하는게 아닌 새로운 주소에 복사하여 사용한다.
 
       2. 배열 병합(Array Concatenation)
+
+    [2] 함수에서의 Spread Operator
+      1. 나머지 매개변수(Rest Parameter)
+          : 함수가 정해지지 않은 수의 매개변수를 배열로 받을 수 있다.
+
+      2. 함수 호출 인수
+
+    [3] 객체예시 Spread Oprator
+      1. 객체 복사
+
+      2. 객체 업데이트
+
+---
+
+### 5. Destructuring (구조 분해 할당)
+
+    : Destructuring(비구조화)은 Structuring(구조화)된 데이터(배열 또는 객체)를 비구조화 하여 개별적으로 변수에 할당하는 개념이다.
+
+### 6. Math
+
+: 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체
+
+    - Math.max() : 최대값
+    - Math.min() : 최소값
+    - Math.abs() : 절대값
+    - Math.round() : 소수점 반올림(자릿수 지정할 수 없음)
+    - Math.ceil() : 소수점 올림
+    - Math.floor() : 소수점 버림
+    - Math.random() : 난수(0.0 ~ 1.0)
+    - Math.toFixed() : 지정한 자릿수에서 반올림
