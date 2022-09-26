@@ -112,3 +112,14 @@ console.log((25.5236576).toFixed(3)); // 25.524
 console.log((25.5231235).toFixed(2)); // 25.52
 console.log((25.526734).toFixed(3)); // 25.527
 console.log((25.526455).toFixed(1)); // 25.5
+
+///////////////////////////////////////////////
+
+// 20220926일 기준
+let date = new Date();
+console.log(date); // 2022-09-26T12:58:36.753Z
+console.log(date.getFullYear()); // 2022
+console.log(date.getMonth()); // 8
+console.log(date.getMonth() + 1); // 9
+console.log(date.getDate()); // 26
+console.log(date.getDay()); // 1

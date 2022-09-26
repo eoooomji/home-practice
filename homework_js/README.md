@@ -565,6 +565,8 @@
 
     : Destructuring(비구조화)은 Structuring(구조화)된 데이터(배열 또는 객체)를 비구조화 하여 개별적으로 변수에 할당하는 개념이다.
 
+---
+
 ### 6. Math
 
 : 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체
@@ -577,3 +579,65 @@
     - Math.floor() : 소수점 버림
     - Math.random() : 난수(0.0 ~ 1.0)
     - Math.toFixed() : 지정한 자릿수에서 반올림
+
+---
+
+### 7. Date
+
+: 시간의 한 점을 플랫폼에 종속되지 않는 형태로 나타낸다.
+
+: Date 객체는 1970년 1월 1일 UTC(협정 세계시) 자정과의 시간 차이를 밀리초로 나타내는 정수 값을 담는다.
+
+    - getFullYear() : 년도
+    - getMonth() + 1 : 월(1월의 값을 0으로 처리한다. 현재 월을 알기 위해서는 '+1'을 해주면 된다.)
+    - getDate() : 일
+    - geyDay() : 요일(0 : 일요일, 6: 토요일)
+
+---
+
+## 12. DOM 문서 객체 모델(The Document Object Model)
+
+: 문서객체모델(The Document Object Model)은 HTML, XML 문서의 프로그래밍 interface이다.
+
+: 문서의 구조화된 표현(structured representation)을 제공하며 프로그래밍 언어가 DOM 구조에
+접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.
+
+: nodes(element, text, attribute 등 12가지)와 objects로 문서를 표현한다.
+
+: 브라우저의 동작 원리 및 설명 (https://d2.naver.com/helloworld/59361)
+
+---
+
+### The HTML DOM Tree of Objects
+
+![picture](img/image.png)
+
+    - Node : 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다.
+    - defer : parsing한 HTML문서의 내용에 적용할 script를 파싱이 다 끝난 후 적용한다는 속성
+    - alert : 확인 버튼을 가지며 메시지를 지정할 수 있는 경고 대화 상자를 띄운다.
+    - document.getElementbyId(''); : 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환한다.
+    - document.getElementbyTagName('') : 엘리먼트의 HTMLCollection 과 주어진 태그명을 반환한다.
+                                       : 루트 노드를 포함해 전체 다큐먼트를 대상으로 검색한다.
+    - documet.querySelector('') : 선택자와 일치하는 문서 내 첫 번째 Element를 반환한다.
+                                : 일치하는 요소가 없으면 null을 반환한다.
+    - Node.style.속성 :  스크립트에서 스타일을 주고싶을 떄 사용.
+                      : Node 뒤에 꼭 style을 붙이고 코드작성을 해야한다.
+    - Node.parentNode : NodeDOM 트리에서 지정된 노드의 부모를 반환한다.
+    - Node.previouSibling : 앞에 이웃을 가져오기 위한 메서드
+                          : 부모 목록 Node에서 지정된 노드 바로 앞의 노드를 반환 하거나 지정된 노드가 해당 목록의 첫 번째 노드인 경우 반환합니다.
+    - Node.nextSibling : 뒤에 이웃을 가져오기 위한 메서드
+                       : 부모의 childNodes 목록에서 지정된 노드 바로 다음에 있는 노드를 반환한다.
+    - Node.previouElementSibling : 앞에 이웃의 요소를 가져오기 위한 메서드
+    - Node.nextElementSibling : 뒤에 이웃의 요소를 가져오기 위한 메서드
+    - Node.childNodes
+    - Node.children
+    - Node.firstChild, first.ElementChild
+    - Node.getArrtibute('속성명'), Node.setAttribute('속성명',값)
+    - Node.id = '속성명' : 속성명의 id값을 줄 떄
+    - innerText / innerHTML : 요소의 컨텐츠를 가져온다.(텍스트 값만 가져온다. / 여러요소를 가져온다. 배열로 출력이 되니 인덱스 값을 입력하여 가져온다.)
+
+    - event : 문서 객체에 이벤트를 적용하는 속성
+        ◦ 요소선택.이벤트종류 = function(){실행할 문장};
+        ◦ onclick : 클릭했을 때 출력함
+        ◦ onsubmit : 클릭했을 때 데이터를 제출한다.
+        ◦ submit() : 강제적으로 sbuit()이벤트를 실행시킨다.

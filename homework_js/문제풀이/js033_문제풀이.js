@@ -33,17 +33,24 @@ console.log(`평균: ${Math.floor(ave)}`);
   [ '이영희', 100, 35, 75, 210, 70.00 ]]
   최고점: 71.67
 */
-let pn = [
+let exam = [
   ['홍길동', 90, 85, 40],
   ['이영희', 100, 35, 75],
 ];
-let a, b;
-[a, b] = pn;
-let n = a.forEach((element) => {
-  if (element != Number) {
-    console.log(element);
-  }
-});
 
-console.log(a.length);
-console.log();
+for (let i = 0; i < exam.length; i++) {
+  let fullName, jumsu;
+  [fullName, ...jumsu] = exam[i];
+  let hap = jumsu.reduce(function (total, element) {
+    return total + element;
+  });
+  exam[i].push(hap);
+  exam[i].push((hap / jumsu.length).toFixed(2));
+}
+console.log(exam);
+
+let lastEle = exam.map((element) => {
+  return element[element.length - 1];
+});
+// console.log(lastEle);
+console.log(`최고점: ${Math.max(...lastEle)}`);
