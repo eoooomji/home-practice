@@ -1,5 +1,7 @@
 // js19.js
 
+// 내일 물어보기
+
 let pNode = document.getElementById('wrap');
 console.log(`${pNode.nodeType}, ${pNode.nodeName}, ${pNode.nodeValue}`);
 // 1, P, null
