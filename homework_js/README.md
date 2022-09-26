@@ -134,19 +134,26 @@
 
 - 배열 (Array)
 
-  : [x, y] - 직관적으로 구분이 안된다.  
-  : 배열로 값을 주면 값에 index가 주어진다.  
+  : [x, y] - 직관적으로 구분이 안된다.
+
+  : 배열로 값을 주면 값에 index가 주어진다.
+
   : 배열에 있는 각각의 값을 element라 부른다.
 
 - 객체 (Object)
 
-  : {x:n, y:n-1} - 직관적으로 구분이 가능하다.  
-  : 리터럴(property) {property:value, property:value}  
-  : java에서는 element(요소)를 가져옴 for(String element : city)  
+  : {x:n, y:n-1} - 직관적으로 구분이 가능하다.
+
+  : 리터럴(property) {property:value, property:value}
+
+  : java에서는 element(요소)를 가져옴 for(String element : city)
+
   : javascript에서는 index를 가져옴 for(let idx in city){}
 
 - 함수 : function
-- new String, new Number .... : 일반적인 string(원시데이터)의 주소가 아닌 new로 새로운 주소를 만들어 그곳에 데이터(객체)를 저장한다.
+- new String, new Number ....
+
+  : 일반적인 string(원시데이터)의 주소가 아닌 new로 새로운 주소를 만들어 그곳에 데이터(객체)를 저장한다.
 
 > typeof : 어떠한 데이터 타입인지 알아보기 위해 사용한다.
 >
