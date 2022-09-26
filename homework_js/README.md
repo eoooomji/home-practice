@@ -635,6 +635,7 @@
     - Node.getArrtibute('속성명'), Node.setAttribute('속성명',값)
     - Node.id = '속성명' : 속성명의 id값을 줄 떄
     - innerText / innerHTML : 요소의 컨텐츠를 가져온다.(텍스트 값만 가져온다. / 여러요소를 가져온다. 배열로 출력이 되니 인덱스 값을 입력하여 가져온다.)
+    - selectedIndex : 선택된 데이터의 인덱스 값 표출
 
     - event : 문서 객체에 이벤트를 적용하는 속성
         ◦ 요소선택.이벤트종류 = function(){실행할 문장};
