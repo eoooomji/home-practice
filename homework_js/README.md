@@ -476,6 +476,7 @@
         : 배열.forEach(function(element[, index]){수행할 문장})
         : 문자열은 forEach()를 제공하지 않으므로 사용할 수 없다.
         : 주어진 함수를 배열 요소 각각에 대해 실행한다.
+        : 객체를 배열로 만들어 주는 기능이 있다. 다만, 안되는 경우도 있다.
     - map()
         : 배열.map(callback(함수))
         : 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환하는 메서드
@@ -627,6 +628,7 @@
     - documet.querySelector('')
         : 선택자와 일치하는 문서 내 첫 번째 Element를 반환한다.
         : 일치하는 요소가 없으면 null을 반환한다.
+        : 객체가 그룹 클래스로 묶여있어도 하나의 객체만 가져온다.
 
 ### 12-2. Node
 
@@ -659,6 +661,19 @@
         ◦ onclick : 클릭했을 때 출력함
         ◦ onsubmit : 클릭했을 때 데이터를 제출한다.
         ◦ submit() : 강제적으로 sbuit()이벤트를 실행시킨다.
+        ◦ propagation(이벤트 전파)
+            - Capturing phase(캡쳐링) : 부모요소에서 target요소로 이벤트 전파
+            - Bubbling phase(버블링) : target요소에서 부모요소로 이벤트 전파
+            - Node.addEventListener('이벤트', 함수, 이벤트전파)
+                : 이벤트 전파 =>  true : capturing, false : bubbling
+                : 코드 작성 순으로 부모와 자식이 결정된다.
+        ◦ 이벤트 차단
+            - stopPropagation()
+                : 현재 이벤트가 캡쳐링/버블링 단계에서 더이상 전파되지 않도록 방지한다.
+                : 전파를 방지해도 이벤트의 기본 동작은 실행되므로, stopPropagation()이 링크나 버튼의 클릭을 막는 것은 아니다.(jQuery)
+            - preventDefault() : 디폴트 이벤트 차단 (javascript, jQuery)
+            - 이벤트 Propagation 참조 사이트 : https://www.w3.org/TR/DOM-Level-3-Events/
+
 
     - checkbox
         ◦ checked, selected : 논리값으로 출력이 된다.(true, false)
