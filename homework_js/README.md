@@ -615,18 +615,31 @@
     - Node : 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다.
     - defer : parsing한 HTML문서의 내용에 적용할 script를 파싱이 다 끝난 후 적용한다는 속성
     - alert : 확인 버튼을 가지며 메시지를 지정할 수 있는 경고 대화 상자를 띄운다.
+
+---
+
+### 12-1. document
+
     - document.getElementbyId(''); : 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환한다.
-    - document.getElementbyTagName('') : 엘리먼트의 HTMLCollection 과 주어진 태그명을 반환한다.
-                                       : 루트 노드를 포함해 전체 다큐먼트를 대상으로 검색한다.
-    - documet.querySelector('') : 선택자와 일치하는 문서 내 첫 번째 Element를 반환한다.
-                                : 일치하는 요소가 없으면 null을 반환한다.
-    - Node.style.속성 :  스크립트에서 스타일을 주고싶을 떄 사용.
-                      : Node 뒤에 꼭 style을 붙이고 코드작성을 해야한다.
+    - document.getElementbyTagName('')
+        : 엘리먼트의 HTMLCollection 과 주어진 태그명을 반환한다.
+        : 루트 노드를 포함해 전체 다큐먼트를 대상으로 검색한다.
+    - documet.querySelector('')
+        : 선택자와 일치하는 문서 내 첫 번째 Element를 반환한다.
+        : 일치하는 요소가 없으면 null을 반환한다.
+
+### 12-2. Node
+
+    - Node.style.속성
+        :  스크립트에서 스타일을 주고싶을 떄 사용.
+        : Node 뒤에 꼭 style을 붙이고 코드작성을 해야한다.
     - Node.parentNode : NodeDOM 트리에서 지정된 노드의 부모를 반환한다.
-    - Node.previouSibling : 앞에 이웃을 가져오기 위한 메서드
-                          : 부모 목록 Node에서 지정된 노드 바로 앞의 노드를 반환 하거나 지정된 노드가 해당 목록의 첫 번째 노드인 경우 반환합니다.
-    - Node.nextSibling : 뒤에 이웃을 가져오기 위한 메서드
-                       : 부모의 childNodes 목록에서 지정된 노드 바로 다음에 있는 노드를 반환한다.
+    - Node.previouSibling
+        : 앞에 이웃을 가져오기 위한 메서드
+        : 부모 목록 Node에서 지정된 노드 바로 앞의 노드를 반환 하거나 지정된 노드가 해당 목록의 첫 번째 노드인 경우 반환합니다.
+    - Node.nextSibling
+        : 뒤에 이웃을 가져오기 위한 메서드
+        : 부모의 childNodes 목록에서 지정된 노드 바로 다음에 있는 노드를 반환한다.
     - Node.previouElementSibling : 앞에 이웃의 요소를 가져오기 위한 메서드
     - Node.nextElementSibling : 뒤에 이웃의 요소를 가져오기 위한 메서드
     - Node.childNodes
@@ -636,9 +649,16 @@
     - Node.id = '속성명' : 속성명의 id값을 줄 떄
     - innerText / innerHTML : 요소의 컨텐츠를 가져온다.(텍스트 값만 가져온다. / 여러요소를 가져온다. 배열로 출력이 되니 인덱스 값을 입력하여 가져온다.)
     - selectedIndex : 선택된 데이터의 인덱스 값 표출
+    - this
+        : 함수를 호출한 방법에 의해 결정된다.
+        : 실행중에는 할당으로 설정할 수 없고 함수를 호출할 때 마다 다를 수 있다.
+    - Array.from() : NodeList를 Array로 변환
 
     - event : 문서 객체에 이벤트를 적용하는 속성
-        ◦ 요소선택.이벤트종류 = function(){실행할 문장};
+        ◦ Node.이벤트종류 = function(){실행할 문장};
         ◦ onclick : 클릭했을 때 출력함
         ◦ onsubmit : 클릭했을 때 데이터를 제출한다.
         ◦ submit() : 강제적으로 sbuit()이벤트를 실행시킨다.
+
+    - checkbox
+        ◦ checked, selected : 논리값으로 출력이 된다.(true, false)

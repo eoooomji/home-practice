@@ -1,7 +1,5 @@
 // js19.js
 
-// 내일 물어보기
-
 let pNode = document.getElementById('wrap');
 console.log(`${pNode.nodeType}, ${pNode.nodeName}, ${pNode.nodeValue}`);
 // 1, P, null
@@ -37,6 +35,6 @@ console.log(bodyName.innerHTML); // 모든걸 가져온다.
 let fname = document.querySelector('#fname');
 console.log(fname.value); // 홍길동
 
-// let fname = document.querySelector('.fname');
-// console.log(fname.value);
+let fname1 = document.querySelector('.fname');
+console.log(fname.value);
 // js19.js:39 Uncaught TypeError: Cannot read properties of null (reading 'value')
