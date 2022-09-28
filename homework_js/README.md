@@ -654,6 +654,7 @@
     - this
         : 함수를 호출한 방법에 의해 결정된다.
         : 실행중에는 할당으로 설정할 수 없고 함수를 호출할 때 마다 다를 수 있다.
+        : 이벤트를 따로 주지 않으면 window를 가르킨다.
     - Array.from() : NodeList를 Array로 변환
 
     - event : 문서 객체에 이벤트를 적용하는 속성
@@ -673,6 +674,14 @@
                 : 전파를 방지해도 이벤트의 기본 동작은 실행되므로, stopPropagation()이 링크나 버튼의 클릭을 막는 것은 아니다.(jQuery)
             - preventDefault() : 디폴트 이벤트 차단 (javascript, jQuery)
             - 이벤트 Propagation 참조 사이트 : https://www.w3.org/TR/DOM-Level-3-Events/
+    - call
+        : 모든 함수에서 사용할 수 있다.
+        : this값을 특정 값으로 지정할 수 있다.
+        : 매개변수로 값을 받는다.
+    - apply
+        : 함수 매개변수를 처리하는 방법을 제외하면 call과 같다.
+        : 일반적인 함수와 마찬가지로 매개변수로 직접받지만 apply는 매개변수를 배열로 받는다.
+    - bind : call과 사용방법은 같으나 실행을 해야한다.
 
 
     - checkbox
