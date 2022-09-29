@@ -1,0 +1,125 @@
+/* 기본 바탕 초기화 및 li 한줄로 세우기 */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+/* 공통 CSS */
+
+/* 가운데 정렬 */
+
+.ibx {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.pbx {
+  float: left;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ========= A-header ========== */
+
+/* header {
+  border: 1px solid red;
+} */
+
+.top {
+  position: relative;
+  height: 100px;
+  z-index: 999;
+}
+
+.top1 {
+  width: 200px;
+}
+
+.top2 {
+  width: 1000px;
+}
+
+/* 로고 */
+
+.logo {
+  margin-left: -10px;
+}
+
+/* 메뉴 */
+
+.gnb {
+  width: 800px;
+  height: 50px;
+  background-color: rgb(117, 188, 255);
+  margin-top: 40px;
+  margin-left: 190px;
+}
+
+.gnb li {
+  position: relative;
+  width: 200px;
+  /* border: 1px solid black; */
+}
+
+.gnb a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+.gnb::before {
+  content: ''; /* 표시할 영역 생성. before 사용시 필수로 작성 */
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(218, 238, 255, 0.9);
+  transition: height 0.4s;
+  /* CSS 속성의 값을 점진적으로 바꿀 수 있는 CSS 모듈입니다. 타이밍 함수, 시간 등 여러 속성을 통해 값이 바뀌는 방식을 조절할 수 있습니다. */
+}
+
+/* 서브 메뉴 */
+
+.gnb ol {
+  height: 0px;
+  overflow: hidden;
+}
+
+.gnb:hover ol,
+.gnb:hover::before {
+  height: 170px;
+}
+
+.gnb ol a {
+  font-size: 16px;
+  line-height: 42.5px;
+}
