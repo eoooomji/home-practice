@@ -20,10 +20,10 @@ ul_li.map((e) => {
 let m_num = 0;
 let b_btn = document.querySelector('#next_btn');
 b_btn.onclick = (e) => {
-  if (m_num >= ul_li.length - 3) return false; // 이 부분 궁금
+  if (m_num >= ul_li.length - 3) return false; // 더 이상 그림이 넘어가지 않도록 false값을 준다.
   m_num++;
   list_zone.style.marginLeft = -100 * m_num + 'px';
-  return false;
+  return false; // naver로 넘어가지 않도록 false값을 준다.
 };
 
 // 3. 이전 ( < ) 버튼을 클릭할 때 마다 <li>가 100만큼 이동하게 한다.
