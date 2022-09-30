@@ -70,3 +70,48 @@
     - event
         • on('이벤트',콜백함수)
         • 이벤트함수(콜백함수) ; click(콜백함수)
+
+    - value = val()
+    - innerText = text()
+    - innerHTML = html()
+
+    - class 관련 이벤트
+        • addClass : 클래스 속성 추가
+        • removeClass : 클래스 속성 제거
+        • toggleClass : 토글 클래스 추가(on/off기능이라고 생각하면 된다.)
+
+    - forEach = each(index, function)
+
+    - jquery형태와 nodejs형태 바꾸기
+        • $(변수) : jquery 형태
+        • 변수[0] : nodejs 형태
+
+    - 속성 형태
+        : attribute(HTML), property(Javascript)
+        • attr()
+        • prop()
+
+    - 기준 요소에 요수 추가하기
+        • $('기준요소').before('추가요소')
+        • $('기준요소').after('추가요소')
+        • $('추가요소').insertBefore('기준요소')
+        • $('추가요소').insertAfter('기준요소')
+
+    - 부모 요소에 자식 요소 추가하기
+        • $('부모 요소').append('추가할 자식 요소')
+        • $('부모 요소').prepend('추가할 자식 요소')
+        • $('추가할 자식요소').appenTo('부모 요소')
+        • $('추가할 자식요소').prepenTo('부모 요소')
+
+    - 요소 삭제
+        • remove() : 선택한 요소 삭제
+        • empty() : 선택한 요소의 하위 요소 삭제
+
+    - Mouse 관련 이벤트
+        • mouseover
+        • mouseout
+        • mouseenter
+        • mouseleave
+        • mousemove
+        • mouseup
+        • mousedown
