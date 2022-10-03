@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery011.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+
+        // 이웃 요소의 앞뒤 추가
+        $('#myList').before('<li id="bNode">before</li>');
+        $('#myList').after('<li id="aNode">after</li>');
+        $('<li id="cNode">insertBefore</li>').insertBefore('#myList');
+        $('<li id="dNode">insertAfter</li>').insertAfter('#myList');
+
+        console.log($('ul').children().length);
+
+        // 자식 요소의 앞뒤 추가
+        $('#my').append('<li>append</li>')
+        $('#my').prepend('<li>prepend</li>')
+        $('<li>appendTo</li>').appendTo('#my')
+        $('<li>prependTo</li>').prependTo('#my')
+      });
+    </script>
+  </head>
+  <>
+    <button>commit</button>
+    <ul>
+      <li id="myList">content</li>
+    </ul>
+    <br/>
+    <button>append</button>
+    <ul id="my">
+      <li>first</li>
+    </ul>
+  </body>
+</html>

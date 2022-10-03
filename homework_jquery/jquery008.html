@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery008.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let btnNode = document.getElementById('btn');
+        let btnElement = $('#btn');
+        // document.write(btnNode + ', ' + btnElement + '<br />');
+        // [object HTMLButtonElement](nodejs형태), [object Object](jquery형태)
+
+        // document.write($(btnNode) + ', ' + btnElement[0]);
+        // [object Object], [object HTMLButtonElement]
+
+        $('button').click(function () {
+          document.write(this + ', ' + $(this) + '<br/>');
+          // [object HTMLButtonElement], [object Object]
+          document.write(this.parentNode.nodeName + '<br/>');
+          // BODY : 현재 this는 Node.js형태로 button 요소를 가르키며 button요소의 부모 요소인 body를 카르킨다.
+          document.write($(this).parent().nodeName + '<br / >');
+          // undefined : jquery형태로 작성되었기 때문에 nodeName을 출력할 값이 없다.
+          document.write($(this).parent()[0].nodeName);
+          // BODY : jquery형태에 인덱스 값을 주어 Node.js 형태로 만들어 준 뒤 출력을 하면 BODY값이 출력 된다.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>

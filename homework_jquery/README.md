@@ -57,6 +57,8 @@
 
 : css 안에 속성값을 입력할 때에는 홑따옴표 안에 값을 넣어야 한다.
 
+---
+
     - ' * ' : 모든 요소 선택
     - $('').parent() : '' 요소의 부모 요소
     - $('').children() : '' 요소의 자식 요소
@@ -83,13 +85,13 @@
     - forEach = each(index, function)
 
     - jquery형태와 nodejs형태 바꾸기
-        • $(변수) : jquery 형태
-        • 변수[0] : nodejs 형태
+        • $(변수) : jquery 형태 (Object)
+        • 변수[0] : nodejs 형태 (HTMLElement)
 
     - 속성 형태
         : attribute(HTML), property(Javascript)
-        • attr()
-        • prop()
+        • attr() : HTML내에 해당하는 속성 값
+        • prop() : 해당 속성의 출력 값
 
     - 기준 요소에 요수 추가하기
         • $('기준요소').before('추가요소')
@@ -107,11 +109,13 @@
         • remove() : 선택한 요소 삭제
         • empty() : 선택한 요소의 하위 요소 삭제
 
+    - change : cilck이벤트와 달리 값이 바뀌었을 때 이벤트가 발생한다.
+
     - Mouse 관련 이벤트
         • mouseover
         • mouseout
         • mouseenter
         • mouseleave
-        • mousemove
-        • mouseup
-        • mousedown
+        • mousemove : 마우스를 움직일 때의 출력 값
+        • mouseup : 마우스를 땠을 때 출력 값
+        • mousedown : 마우스를 누르고 있을 때 출력 값

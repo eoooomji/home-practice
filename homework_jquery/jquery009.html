@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><jquery009 class="html"></jquery009></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log(document.querySelector('a').href);
+        // http://127.0.0.1:5501/jquery001.html
+        console.log(document.querySelector('a').getAttribute('href'));
+        // jquery001.html
+
+        console.log($('a').attr('href') + ', ' + $('a').prop('href'));
+        // jquery001.html, http://127.0.0.1:5501/jquery001.html
+        // attr은 속성에 해당하는 값을, prop는 속성에 해당하는 출력 값을 나타냄
+
+        console.log(
+          $('input').attr('checked') + ',' + $('input').prop('checked')
+        );
+        // checked,true
+
+        console.log($('button').attr('id') + ', ' + $('button').prop('id'));
+        // btn, btn
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+    <a href="jquery001.html">첫 페이지</a>
+    <input type="checkbox" checked="checked" />
+
+    <div>test</div>
+  </body>
+</html>
