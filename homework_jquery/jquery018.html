@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery018.html</title>
+    <style>
+      ol.paging {
+        list-style-type: none;
+        background-color: yellow;
+      }
+      ol.paging li {
+        float: left;
+        margin-left: 8px;
+      }
+      ol.paging li a {
+        text-decoration: none;
+        border: 1px solid #00b3dc;
+        padding: 3px 7px;
+        color: black;
+        font-weight: bold;
+      }
+      ol.paging li a.cbox {
+        background-color: #00b3dc;
+        color: white;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('ol.paging li a').click(function (e) {
+          $('ol.paging li a').removeClass('cbox');
+          $(this).addClass('cbox');
+          //   return false;
+          e.preventDefault();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ol class="paging">
+      <li><a href="#">이전으로</a></li>
+      <li><a href="#" class="cbox">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">다음으로</a></li>
+    </ol>
+  </body>
+</html>

@@ -57,6 +57,9 @@
 
 : css 안에 속성값을 입력할 때에는 홑따옴표 안에 값을 넣어야 한다.
 
+: 정적인 요소 - HTML내에 body에 적힌 요소
+: 동적인 요소 - 스크립트로 따로 생성한 요소
+
 ---
 
     - ' * ' : 모든 요소 선택
@@ -70,8 +73,14 @@
     - $(''):nth-of-type(n) : '' 요소에서 n번째에 해당하는 ''요소에 스타일 적용 (index 1 부터 시작)
 
     - event
-        • on('이벤트',콜백함수)
+        • 이벤트 생성 : on('이벤트',함수) / 이벤트 제거 off('이벤트', 함수)
         • 이벤트함수(콜백함수) ; click(콜백함수)
+        • 여러개의 이벤트 적용
+            : 요소.on('이벤트 이벤트', 함수(){})
+        • 이중 이벤트 생성
+            : $('요소').on({이름(이벤트): 값(함수), 이름(이벤트): 값(함수)})
+        • 동적인 요소에 이벤트 등록
+            : $(document).on('이벤트', '요소', 함수(){})
 
     - value = val()
     - innerText = text()
@@ -119,3 +128,26 @@
         • mousemove : 마우스를 움직일 때의 출력 값
         • mouseup : 마우스를 땠을 때 출력 값
         • mousedown : 마우스를 누르고 있을 때 출력 값
+
+    - keyup : 키보드를 누루고 땠을 때
+    - keydown : 키보드를 눌렀을 때
+
+    - 위치 및 크기 이벤트
+        • position() : 선택한 요소의 포지션 위치 값 리턴(기준이 자신)
+        • offset() : 선택한 요소의 포지션 위치값 리턴(기준이 바디)
+        • width() : margin, border, padding을 제외한 가로 크기 리턴
+        • innerWidth() : padding()을 포함한 가로 크기 리턴
+        • outerWidth() : border와 padding을 포함한 가로 크기 리턴
+        • outerWidth(true) : margin, border, padding을 포함한 가로 크기 리턴
+
+    - scrollTop() : 현재 스크롤창의 위치 값
+
+---
+
+## jQuery 관련 사이트
+
+- https://jquery.com/ 제이쿼리 홈페이지
+
+- https://jqueryui.com/ 제이쿼리 UI 라이브러리
+
+- https://bxslider.com/ 제이쿼리 관련 bx 슬라이더 라이브러리
