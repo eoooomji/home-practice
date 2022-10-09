@@ -14,10 +14,9 @@
 	
 ---
 
-		- 리터럴(literal) 
-			: 그 자체의 값(1, 2, 3, ...., 'a', 'b', 'c', ....., true, false)
- 	 	- 변수(variable) : 하나의 값을 저장하기 위한 메모리 공간
-  					:자바에서 제공하는 데이터 타입
+	- 리터럴(literal) : 그 자체의 값(1, 2, 3, ...., 'a', 'b', 'c', ....., true, false)
+ 	- 변수(variable) : 하나의 값을 저장하기 위한 메모리 공간
+  			 :자바에서 제공하는 데이터 타입
   		1. Primitive Data Type(기본 데이터 타입)
  			문자 - char(2byte)
   			숫자 - 정수 : byte(1byte), short(2byte), int(4byte), long(8byte)
@@ -99,3 +98,13 @@
 			- || : 둘중 하나라도 true이면 true가 출력
 			- 우선순위 : && > ||
 			- 우선순위를 먼저 비교한 후 좌변부터 논리가 진행된다.
+
+---
+
+### 제어문(control statement) : 문장의 흐름을 제어해주는 기능이다.
+	
+	- 조건문 : if ~ else, switch ~ case
+	- 반복문 : for, while, do ~ while
+	- 기타 : break, continue, label(임의 이름)
+	
+		1. 조건문 if
