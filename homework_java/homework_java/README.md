@@ -108,3 +108,47 @@
 	- 기타 : break, continue, label(임의 이름)
 	
 		1. 조건문 if
+		
+		 - if(조건식){
+  		   조건식이 참일 때 수행 문장;
+  		   }else{
+ 		   조건식이 거짓일 때 수행 문장;
+  		   }
+		 
+		 - 조건식을 만족할때만 수행할 문장이 있는 경우
+  		   if(조건식){
+ 		   수행할 문장;
+ 		   }
+		   
+		 - if(조건식) { if(조건식) {} else { if(조건식) {} }
+  	     	  
+		 - 다중 if~else
+ 		   if(조건식){
+  		   수행할 문장;
+  		   }else if(조건식){
+  		   수행할 문장;
+           	   }else if(조건식){
+    	           수행할 문장;
+  		   }else{
+  	    	   수행할 문장;
+  		   }
+		    
+		2. 조건문 switch
+		
+		switch(식){
+ 		case 값1 : 수행할 문장; break;
+                case 값2 : 수행할 문장; break;
+                case 값3 : 수행할 문장; break;
+                default : 수행할 문장;
+                }
+		
+		- 식의 결과 타입 : byte, short, char, int, enum(jdk7), String(jdk7)
+		
+ 		- switch~case에서 break를 만나면 현재 수행중인 제어문을 완전히 빠져나온다.
+		
+		3. 반복문 for
+		  
+		  - for(조건식 ; 조건식 ; 증감식){
+		    반복 수행할 문장
+		    }
+		
