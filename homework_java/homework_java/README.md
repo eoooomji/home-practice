@@ -103,9 +103,10 @@
 
 ### 제어문(control statement) : 문장의 흐름을 제어해주는 기능이다.
 	
-	- 조건문 : if ~ else, switch ~ case
-	- 반복문 : for, while, do ~ while
-	- 기타 : break, continue, label(임의 이름)
+- 조건문 : if ~ else, switch ~ case
+- 반복문 : for, while, do ~ while
+- 기타 : break, continue, label(임의 이름)
+
 	
 		1. 조건문 if
 		
@@ -151,4 +152,50 @@
 		  - for(조건식 ; 조건식 ; 증감식){
 		    반복 수행할 문장
 		    }
-		
+		    
+---
+
+### Array 배열
+
+- 배열 : 서로 관련이 있는 데이터 타입이 같은 데이터의 집합
+- 변수 : 하나의 값을 저장하기 위한 메모리 공간
+- 배열 생성 = 메모리 생성(확보)
+- new 키워드를 이용해서 배열을 생성
+
+	0. 데이터 타입에 따른 기본값
+	  int[] data1 = new int[3]; // 0 기본값
+	  long[] data2 = new long[3]; // 0L 기본값
+	  float[] data3 = new float[3]; // 0.0F 기본값
+	  double[] data4 = new double[3]; // 0.0 기본값
+	  char[] data5 = new char[3]; // \u0000 기본값(유니코드)
+	  boolean[] data6 = new boolean[3]; // false 기본값
+	  String[] data7 = new String[3]; // null 기본값
+	
+	1. 배열 선언
+	  - int[] arr = new int[];
+	  
+	  - int[] arr = new int[]{};
+	  
+	  - int[] arr = {};
+	  
+	2. 2차원 배열
+	  - int[][] arr = new int[][];
+	  
+	  - int[][] arr = new int[][]{{}};
+	  
+	  - int[][] arr = {{}};
+	  
+	  - 2차원 배열 형식
+	    for(int i = 0 ; i < arr.length ; i++){
+	      for(int j = 0 ; j < arr[i].length ; j++){
+	        System.out.printf("%d(숫자일경우)", arr)
+	      } System.out.println() // 자리바꿈
+	    }
+	    
+	3. 가변 배열
+	  - 가변 배열을 생성할때는 제일 마지막의 배열크기는 지정하지 않는다.
+	  - 가변 배열을 제공하는 이유는 메모리 손실을 최소화하기 위한 목적이다.
+	  
+	  - int[][] num = new int[3][];
+	  
+	  - int[][][] num = new int[3][][];
