@@ -1,4 +1,4 @@
-package java_basic;
+package java01_basic;
 
 public class Java004 {
 
