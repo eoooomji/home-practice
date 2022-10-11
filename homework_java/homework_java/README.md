@@ -14,10 +14,9 @@
 	
 ---
 
-		- 리터럴(literal) 
-			: 그 자체의 값(1, 2, 3, ...., 'a', 'b', 'c', ....., true, false)
- 	 	- 변수(variable) : 하나의 값을 저장하기 위한 메모리 공간
-  					:자바에서 제공하는 데이터 타입
+	- 리터럴(literal) : 그 자체의 값(1, 2, 3, ...., 'a', 'b', 'c', ....., true, false)
+ 	- 변수(variable) : 하나의 값을 저장하기 위한 메모리 공간
+  			 :자바에서 제공하는 데이터 타입
   		1. Primitive Data Type(기본 데이터 타입)
  			문자 - char(2byte)
   			숫자 - 정수 : byte(1byte), short(2byte), int(4byte), long(8byte)
@@ -99,3 +98,182 @@
 			- || : 둘중 하나라도 true이면 true가 출력
 			- 우선순위 : && > ||
 			- 우선순위를 먼저 비교한 후 좌변부터 논리가 진행된다.
+
+---
+
+### 제어문(control statement) : 문장의 흐름을 제어해주는 기능이다.
+	
+- 조건문 : if ~ else, switch ~ case
+- 반복문 : for, while, do ~ while
+- 기타 : break, continue, label(임의 이름)
+
+	
+		1. 조건문 if
+		
+		 - if(조건식){
+  		   조건식이 참일 때 수행 문장;
+  		   }else{
+ 		   조건식이 거짓일 때 수행 문장;
+  		   }
+		 
+		 - 조건식을 만족할때만 수행할 문장이 있는 경우
+  		   if(조건식){
+ 		   수행할 문장;
+ 		   }
+		   
+		 - if(조건식) { if(조건식) {} else { if(조건식) {} }
+  	     	  
+		 - 다중 if~else
+ 		   if(조건식){
+  		   수행할 문장;
+  		   }else if(조건식){
+  		   수행할 문장;
+           	   }else if(조건식){
+    	           수행할 문장;
+  		   }else{
+  	    	   수행할 문장;
+  		   }
+		    
+		2. 조건문 switch
+		
+		switch(식){
+ 		case 값1 : 수행할 문장; break;
+                case 값2 : 수행할 문장; break;
+                case 값3 : 수행할 문장; break;
+                default : 수행할 문장;
+                }
+		
+		- 식의 결과 타입 : byte, short, char, int, enum(jdk7), String(jdk7)
+		
+ 		- switch~case에서 break를 만나면 현재 수행중인 제어문을 완전히 빠져나온다.
+		
+		3. 반복문 for
+		  
+		  - for(조건식 ; 조건식 ; 증감식){
+		    반복 수행할 문장
+		    }
+		    
+---
+
+### Array 배열
+
+- 배열 : 서로 관련이 있는 데이터 타입이 같은 데이터의 집합
+- 변수 : 하나의 값을 저장하기 위한 메모리 공간
+- 배열 생성 = 메모리 생성(확보)
+- new 키워드를 이용해서 배열을 생성
+
+		0. 데이터 타입에 따른 기본값
+		  int[] data1 = new int[3]; // 0 기본값
+	  	  long[] data2 = new long[3]; // 0L 기본값
+	  	  float[] data3 = new float[3]; // 0.0F 기본값
+	  	  double[] data4 = new double[3]; // 0.0 기본값
+	  	  char[] data5 = new char[3]; // \u0000 기본값(유니코드)
+	  	  boolean[] data6 = new boolean[3]; // false 기본값
+	  	  String[] data7 = new String[3]; // null 기본값
+		  
+		  char 배열 인덱스 값 선택
+		  : 변수.charAt();
+		  String 배열 인덱스 값 선택
+		  : 변수.toCharArray();
+		  
+	
+		1. 배열 선언
+		  - int[] arr = new int[];
+	  
+		  - int[] arr = new int[]{};
+	  
+	  	  - int[] arr = {};
+	  
+		2. 2차원 배열
+	  	  - int[][] arr = new int[][];
+	  
+	  	  - int[][] arr = new int[][]{{}};
+	  
+ 		  - int[][] arr = {{}};
+	  
+		  - 2차원 배열 형식
+		    for(int i = 0 ; i < arr.length ; i++){
+	      	      for(int j = 0 ; j < arr[i].length ; j++){
+	                System.out.printf("%d(숫자일경우)", arr)
+	              } System.out.println() // 자리바꿈
+	            }
+	    
+		3. 가변 배열
+	  	  - 가변 배열을 생성할때는 제일 마지막의 배열크기는 지정하지 않는다.
+	  	  - 가변 배열을 제공하는 이유는 메모리 손실을 최소화하기 위한 목적이다.
+	  
+	  	  - int[][] num = new int[3][];
+	  
+	  	  - int[][][] num = new int[3][][];
+		  
+---
+
+### Method (메서드)
+
+- 값을 계산하기 위해서 사용되는 기능이다.
+- 객체의 동작을 처리하기 위한 기능이다.
+- 프로그램을 실행하면 JVM(자바가상머신 - java Virtual Machine)에서 main스레드가 main()메서드를 호출한다.
+- JVM은 운영체제에 특화된 코드로 변환하여 실행한다. 즉, 자바프로그램 실행환경을 만들어 주는 소프트웨어이다.
+	
+	0. Method 메서드 선언
+	
+	  method 정의 : 선언부 + 구현부
+ 	  반환자료형 메소드명(데이터타입 매개변수) => 메소드 선언부
+  	  void    main (String[] args) 
+  	  {
+   	  메소드가 호출 되었을 때 실행 구문;   => 메소드 구현부
+   	  return 값;                             
+  	  }
+	  
+	  - 매개변수 = parameter
+	  - 인수 = argument
+	  - void : return되는 타입이 없음을 의미한다.
+	  
+	  - JVM 자바 가상 머신 메모리 구조
+	    : Method Area(클래스, 상수, 변수, 메소드코드, 생성자코드)
+	    : Stack Area
+	    : Heap Area : 참조 데이터 타입의 저장 공간
+	  
+	1. 리턴값이 없고 매개변수도 없는 형태
+ 	   void add(){
+ 	     int x = 10;
+ 	     int y = 20;
+ 	     if(x<0)
+ 	       return; // 메소드를 강제적으로 빠져 나와라
+ 	     System.out.println(x+y);
+ 	   }
+ 	   add();
+  
+ 	 2. 리턴값은 있고 매개변수는 없는 형태
+ 	   double avg(){
+ 	     int x = 10;
+ 	     int y = 20;
+ 	     return (x+y)/2; // int값을 출력하지만 casting으로 인해 double값으로 바뀌어 출력 or return (x+y)/2.0;
+ 	   }
+ 	   
+  	 3. 리턴값이 없고 매개변수는 있는 형태
+ 	   void plus(int x, int y){
+ 	     System.out.println(x+y);
+ 	   }
+ 	   plus(10, 20);
+  
+ 	 4. 리턴값이 있고 매개변수도 있는 형태
+ 	   double avg(int x, int y){
+ 	     return (x+y)/2.0;
+ 	   }
+ 	   avg(10, 20);
+	   
+	 5. 자바에서 제공하는 데이터 타입(data type)
+ 	   - primitive data type : byte, short, int, long, float, double, boolean, char
+  	   - reference data type : array, class, interface, enum
+ 	
+ 	   [argument 전달방식]
+	     (1). call by value : 값에 의한 복사
+  	  	argument를 전달할때 primitive data type을 넘겨주는 형식
+  	  	- 장점 : 복사하여 처리하기 때문에 원래 값이 보존이 되어 안전하다.
+  	  	- 단점 : 복사를 하기 때문에 메모리 사용량이 늘어난다.
+  
+  	     (2) call by reference : 주소에 의한 복사
+     		argument를 전달할때 reference data type을 넘겨주는 형식
+		- 장점 : 참조를 하기 때문에 메모리를 절약한다.
+                - 단점 : 참조를 하기 때문에 원래 값에 영향을 받는다.
